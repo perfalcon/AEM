@@ -1,8 +1,7 @@
 #  AEM Consoles
-Login Page
- http://localhost:4502/aem/start.html
+Login Page:  http://localhost:4502/aem/start.html
 
-Admin Consle:http://localhost:4502/siteadmin
+Admin Consle: http://localhost:4502/siteadmin
 
 CRX console: http://localhost:4502/crx/explorer/index.jsp
 
