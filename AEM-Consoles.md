@@ -7,6 +7,8 @@ CRX console: http://localhost:4502/crx/explorer/index.jsp
 
 OSGI Management Console: http://localhost:4502/system/console
 
+Logger Console: http://localhost:4502/system/console/slinglog
+
 CRXDE Lite Console: http://localhost:4502/crx/de
 
 Package Manager Console: http://localhost:4502/crx/packmgr/index.jsp
