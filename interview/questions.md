@@ -290,3 +290,17 @@
   - In component A, added sling:resourceType property and as value component B path
   - when you include the component A into the page, AEM will render component A
   - But when you drag and drop component A into parsys of the page, AEM will render component B
+55. What is sling resource merger?
+  - Sling framework bundle (org.apache.sling.resourcemerger) gives us flexibility to have merged view on multiple other resources. The exact merging mechanism depends on the resource picker implementation (i.e. Overlay or Override).
+  - By this Sling Resource Merger, It is possible to
+       1. remove existing resource/properties from the underlying resources,
+       2. modify existing properties/child resources of the underlying resources
+       3. add new properties/child resources
+  - We can achieve the above using the following properties.
+    1. sling:hideProperties (String or String[]) — Specifies the property, or list of properties, to hide.The wildcard * hides all.
+    2. sling:hideResource (Boolean) — Indicates whether the resources should be completely hidden, including its children.
+    3. sling:hideChildren (String or String[]) — Contains the child node, or list of child nodes, to hide. The properties of the node will be maintained. The wildcard * hides all.
+    4. sling:orderBefore (String) — Contains the name of the sibling node that the current node should be positioned in front of.
+  - The goal of using Sling Resource Merger :-
+      - ensure that customization changes are not made in /libs.
+      - reduce the structure that is replicated from /libs. more
