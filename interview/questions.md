@@ -167,4 +167,67 @@
 21. Which provider service scans the CRX repository for artifacts and provides them to the OSGi installer?
     - Sling JCR Installer scans the CRX repository for artifacts and provides them to the OSGi installer. 
 
+### Repository - JCR
+ - AEM is built on top of Adobe's CRX platform.
+ - CRX is a data storage system specifically designed for content-centric applications.
+ - AEM uses this content repository to store all its web content, digital assets, scripts, Java libraries, configuration information and other data.
+ - CRX implements the Content Repository API for Java Technology (JCR). This standard defines a data model and application programming interface (that is, a set of commands) for content repositories.
 
+22. What is JCR
+    - A content repository, as defined by JCR, combines features of the traditional relational database with those of a conventional file system.
+        - File system-like features supported by JCR include:
+        - Hierarchy: Content in a JCR repository can be addressed by path. This is useful when delivering content to the web since most websites are also organized hierarchically.
+        - Semi-structured content: JCR can store structured documents, like XML, either as opaque files (as a file system would) or as structures ingested directly into the JCR hierarchy.
+        - Access Control and Locking: JCR can restrict access to different parts of the content hierarchy based on policies or ACLs. It also supports locking of content to prevent conflicts.
+23. What is Oak Indexing?
+   - Unlike Jackrabbit 2, Oak does not index content by default. Custom indexes need to be created when necessary, much like with traditional relational databases. If there is no index for a specific query then the whole repository will be traversed
+    For more information https://docs.adobe.com/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing.html
+24. Explain David's content model
+    David Model:
+     - Data First, Structure Later. Maybe.
+     - Drive the content hierarchy, don't let it happen.
+     - Workspaces are for clone(), merge() and update().
+     - Beware of Same Name Siblings.
+     - References considered harmful.
+     - Files are Files.
+     - IDs are evil.
+        For more information https://docs.adobe.com/docs/en/cq/5-6/howto/model_data.html
+26. Diff between crx 2 & crx 3    
+   - CRX 2	CRX 3
+   - CRX 2 is extended from Jackrabbit.	CRX3 is extended from Jackrabbit OAK.
+   - JackRabbit is a pure JCR implementation.	OAK uses a three tier architecture with NODE STATE MODEL that uses JCR just as a facade
+   - Persistence Manager is used to store data in JackRabbit that allows the content to be written to the persistence layer as a blob.	In OAK, Microkernels write data as native structures of the underlying Database used.                                     For eg. Mongo DB data is written as documents
+   - Jackrabbit runs on LUCENE.	OAK supports SOLR indexing implicitly
+   - CRX2 datastore is on the filesystem by default.	CRX3 supports multiple configurations on DataStore (binary data storage). By default it is implicit
+
+27. Why we need TAR Compaction
+    - If we are using Tar files as the storage, it tends to grow in size and starts claiming disk space every time when data is created or updated as data in tar files are never overwritten rather it keeps adding new versions. To mitigate the same, AEM has garbage collection mechanism which is known as ‘Tar Compaction’ to remove the unused data and reclaim the disk space.
+    - To perform TAR Compaction, please follow this blog http://www.aemcq5tutorials.com/tutorials/online-offline-tar-compaction-in-aem/
+28. You have created a bundle with crxde. what does .bnd file contain?
+   - The .bnd file contains extra metadata about the bundle used by the CRXDE build process.
+29. You want to install bundles through CRX only in the author instance. which folde name can you use for that purpose?
+   - All folders named install.author.
+30. You want to request a JSON representation of content , what do you have to do with the request?
+   - Change the extension to .json.
+32. Which access control polices does JCR session define to manage nodes?
+  - Privileges to access the JCR workspace define to manage nodes
+   
+### Component & Template
+33. What is Dialog, Design Dialog and cq:dialog?
+    - dialog	design-dialog
+    - Dialog will change the content at the page level.	Design dialog will change the content at the template level.
+    - authored in edit mode.	authored in design mode.
+    - node name should be dialog.	node name should be design_dialog.
+    - stored under pages jcr:content node.	stored under design page located under /etc/design/default.
+    - we can get value from properties object.	we can get design dialog value from currentStyle object.
+    - jcr:primaryType is cq:Dialog.	jcr:primaryType is cq:Dialog.
+    - cq:dialog - It is the dialogs for the touch-optimized UI(editor.html).
+        - It uses the Granite UI framework.
+        - Node name is cq:dialog.
+        - jcr:primaryType = nt:unstructured, sling:resourceType = cq/gui/components/authoring/dialog for cq:dialog
+34. Difference between parsys and iparsys.
+    - parsys – It is a placeholder called “Paragraph System”, where we can drag and drop or add other components or scripts at page level.
+    - iparsys - The inherited paragraph system is a paragraph system that also allows you to inherit the created paragraphs from the parent. it is similar to parsys except that it allows to inherits parent page “paragraph system” at template level. You can also cancel paragraph inheritance at a level at any time. It has two checkbox options to cancel/disable the inheritance.
+        - Cancel Inheritance - If selected, the components in this paragraph system are not passed down to the child pages.
+        - Disable Inheritance - If selected, components of this paragraph system on this page are not inherited from the parent page.
+36. ll
