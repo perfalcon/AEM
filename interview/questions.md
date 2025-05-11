@@ -315,5 +315,14 @@
   - Create a folder under your project folder in /apps with the nodeType = cq:ClientLibraryFolder and set property sling:resourceType = widgets/clientlib
 60. How can you configure a CQ component to allow an Author to edit content without opening a dialog?
   - Create and configure the /cq:editConfig/cq:inplaceEditing node under the component node.
-
+61. You want to add a new tab to the page properties dialog. What should you do?
+  - Copy the page properties dialog from the foundation/page component, add a new tab node specifying the cq:Panel node to render the new tab.
+62. You have a page and want to create a child page. Which property has the highest priority to determine which templates can be used?
+  - cq:allowedTemplates
+63. You have created two templates, tempA and tempB. In the property allowedChildren of tempA you include tempB. You create a pageA based on tempA and add a property cq:allowedTemplates with a list of templates, but excluding tempB. Can you select tempB to create a page as child of pageA?
+  - No, tempB needs to be added to the property cq:allowedTemplates of pageA to accomplish that.
+64. How do you get the current rendering mode within a CQ component script?
+  - WCMMode.fromRequest(request);
+65. What is Scaffolding?
+  - With scaffolding we can create a form (a scaffold) with fields that reflect the structure we want for our pages and then use this form to easily create pages based on this structure.   
    
