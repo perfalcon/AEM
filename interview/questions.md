@@ -261,7 +261,21 @@
   - There are two categories of node types, primary and mixin. Every node has a primary node type assigned to it upon creation. In addition, a mixin node type may be added to a node later in its lifecycle.
   - The primary node type of a node usually defines node structure (i.e., allowed and required child nodes and properties) related to the problem domain being modeled. For example, a node used in storing content about business contacts might have the primary type myapp:Contact which defines properties such as myapp:givenName, myapp:familyName and so forth.
   - Mixin node types usually specify additional properties or child nodes related to a capability being added to the node. These capabilities may include generic repository-level functions as in the case of the built-in mixins mix:versionable and mix:lockable, for example, or domain-level capabilities such as a (hypothetical) myapp:Emailable mixin type that adds the property myapp:emailAddress to a node.
-46.     
-    
-    
-    
+46. How to include sidekick into page?
+  - init.jsp should be included in our jsp or script file to display sidekick.
+  - Note:- We should include init.jsp into base page. So that it will appear in all pages which are overriding it.
+  - For more on sidekick watch this [video](https://www.youtube.com/watch?v=U9ZPGNkfCjc)
+47. Explain widget and Xtype in AEM?
+  - widget - Adobe Experience Manager (AEM) uses the ExtJS widgets library, which provides the highly polished user interface elements that work across all the most important browsers and allow the creation of desktop-grade UI experiences. These widgets are included within AEM and, in addition to being used by AEM itself, can be used by any website built using AEM. For more on widgets check this link
+  - xtype - In the ExtJS language, an xtype is a symbolic name given to a class. For more on xtype check this link  
+48.  What is xtype of Dropdown list, Checkbox and Radio button?
+  - Dropdown list, Checkbox and Radio button have same xtype i.e selection. But they have different type select, checkbox and radio respectively.
+49. Difference between allowedPaths, allowedChildren and allowedParents?
+  - allowedPaths - Path of a page that is allowed to be based on this template.
+  - allowedChildren - Path of a template that is allowed to be a child of this template.
+  - allowedParents - Path of a template that is allowed to be a parent of this template.  
+50. What is the ranking at the time of creating template?
+  - ranking - Rank of the template. Used to display the template in the User Interface.    
+51. Suppose you have created the page using "mytemplate" template. After the creation of page, what will happen to the page if someone deleted the "mytemplate" template?
+  - There will be no effect on the page because when page will be requested it will check the sling:resourcetype property of the page not the template. Check sling resolution concept
+  - When you create a page out of a template, properties of template are copied to page and then any change made further to the template wont be reflected in pages created earlier. If you even delete the template, the page would continue to work
