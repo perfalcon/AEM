@@ -258,7 +258,7 @@
 43. How to include component into a page?
   - In Sightly -< div data-sly-resource="${@path='mycomponent', resourceType='foundation/components/mycomponent'}">
   - In JSP -< cq:include path="mycomponent" resourceType="foundation/components/mycomponent" />
-45. ss
+45. ss  asd
 46.     
     
     
