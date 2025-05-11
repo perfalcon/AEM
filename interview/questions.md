@@ -253,8 +253,7 @@
 42. What is sling:include, c:import, cq:include?
   - sling:include - This is the include tag of the Sling JSP Tag library. This tag knows about Sling and also supportsRequestDispatcherOptions.
   - cq:include - This tag is Communiqué specific extension of the Sling JSP Tag library include tag. IIRC it supports callings scripts in addition to just including renderings of resources.
-  - c:import - I assume this is the import tag of the Standard Tag Library. This tag is documented at http://java.sun.com/products/jsp/jstl/1.1/docs/tlddocs/c/import.html and does not know about Sling directly.
-  -     But -- asuming -- this tag is using a RequestDispatcher to dispatch the request, this tag will also pass Sling and the Sling resource resolver.
+  - c:import - I assume this is the import tag of the Standard Tag Library. This tag is documented at http://java.sun.com/products/jsp/jstl/1.1/docs/tlddocs/c/import.html and does not know about Sling directly.But -- asuming --this tag is using a RequestDispatcher to dispatch the request, this tag will also pass Sling and the Sling resource resolver.
 43. How to include component into a page?
   - In Sightly -< div data-sly-resource="${@path='mycomponent', resourceType='foundation/components/mycomponent'}">
   - In JSP -< cq:include path="mycomponent" resourceType="foundation/components/mycomponent" />
