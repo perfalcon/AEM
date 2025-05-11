@@ -304,3 +304,16 @@
   - The goal of using Sling Resource Merger :-
       - ensure that customization changes are not made in /libs.
       - reduce the structure that is replicated from /libs. more
+56.  We have mycomponent component and under mycomponent we have files mycomponent.jsp, mycomponent.html and mycomponent.html.html. Suppose we are including this component into a page, which file will be rendered?
+  - If we have mycomponent.jsp, mycomponent.html and mycomponent.html.html under mycomponent component. AEM will render mycomponent.html.html file.
+  - If we have mycomponent.jsp and mycomponent.html under mycomponent component. AEM will render mycomponent.html file.
+57. Can you create a page without using template in AEM?
+  - Yes, we can create a page without using template in AEM.
+58. You are working with two components: Component A and Component B. Component B has a slightly different behavior than component A. What is the best way to reuse the default script of component A in component B?
+  - Set a property in component B called sling:resourceSuperType with the path to component A and omit the default script in component B
+59. You want to create a custom widget. In which type of folder should you create the custom widget?
+  - Create a folder under your project folder in /apps with the nodeType = cq:ClientLibraryFolder and set property sling:resourceType = widgets/clientlib
+60. How can you configure a CQ component to allow an Author to edit content without opening a dialog?
+  - Create and configure the /cq:editConfig/cq:inplaceEditing node under the component node.
+
+   
