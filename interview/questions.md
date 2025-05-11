@@ -324,5 +324,16 @@
 64. How do you get the current rendering mode within a CQ component script?
   - WCMMode.fromRequest(request);
 65. What is Scaffolding?
-  - With scaffolding we can create a form (a scaffold) with fields that reflect the structure we want for our pages and then use this form to easily create pages based on this structure.   
+  - With scaffolding we can create a form (a scaffold) with fields that reflect the structure we want for our pages and then use this form to easily create pages based on this structure.
+
+### OSGi
+66. Difference between OSGI component and service.
+  - Component - If you want the life of your object to be managed by the OSGi container, you should declare it as a component. Using annotations, you could make a POJO a OSGi component by annotating it with @Component. With this, you will get the ability to start, stop and configure the component using the felix web console. All objects managed by OSGi container are components. You qualify components as services. This means that all services are components but not vice-versa.
+  - Service - OSGi components can be made as OSGi service by marking it with @Service annotation. When you mark a component as service, you could refer (call) this service from other osgi components. Components can refer/call (using container injection – @Reference) other services but not components. In other words, a component cannot be injected into another component / service. Only services can be injected into another component.
+67. You want to change the configuration of a bundle during runtime in the repository. Which location has the highest priority?
+  - /apps/*/config/*
+68. When you are saving or updating a configuration in the Configurations tab in the Apache Felix Web OSGi Console, where are these configuration settings saved?
+  - It will be saved under /crx-quickstart/launchpad/config/.
+69.How to register a service using bundlecontext?
+  - Check this link http://baptiste-wicht.com/posts/2010/07/osgi-hello-world-services.html
    
