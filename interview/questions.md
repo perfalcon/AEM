@@ -334,6 +334,34 @@
   - /apps/*/config/*
 68. When you are saving or updating a configuration in the Configurations tab in the Apache Felix Web OSGi Console, where are these configuration settings saved?
   - It will be saved under /crx-quickstart/launchpad/config/.
-69.How to register a service using bundlecontext?
+69. How to register a service using bundlecontext?
   - Check this link http://baptiste-wicht.com/posts/2010/07/osgi-hello-world-services.html
-   
+
+### Dispatcher
+70. What is Dispatcher
+  - Dispatcher is Adobe Experience Manager's caching and/or load balancing tool. Dispatcher also helps to protect your AEM server from attack.
+  - The Dispatcher helps realize an environment i.e both fast and dynamic. It works as a part of a static HTML server, with the aim of :
+      - Storing as much of the site content as is possible, in the form of static website.
+      - Accessing the layout as little as possible.
+   - For caching, the Dispatcher module uses the Web server's ability to serve static content. The Dispatcher places the cached documents in the document root of the Web server.
+71.  How does the Dispatcher perform caching?
+  - The Dispatcher uses the web server's ability to serve static content. The Dispatcher stores cached documents in the web server’s document root. The Dispatcher has two primary methods for updating the cache content when changes are made to the website.
+  - Content Updates remove the pages that have changed, as well as files that are directly associated with them.
+  - Auto-Invalidation automatically invalidates those parts of the cache that may be out of date after an update. For example, it effectively flags relevant pages as being out of date, without deleting anything.
+        ```
+        Example of cache section:
+        /cache
+        {
+        /docroot "/opt/dispatcher/cache"
+        /statfile "/tmp/dispatcher-website.stat"
+        /allowAuthorized "0"
+        /rules
+        {
+        # List of files that are cached
+        }
+        /invalidate
+        {
+        # List of files that are auto-invalidated
+        }
+        }
+        ```
