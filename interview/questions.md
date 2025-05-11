@@ -258,7 +258,10 @@
 43. How to include component into a page?
   - In Sightly -< div data-sly-resource="${@path='mycomponent', resourceType='foundation/components/mycomponent'}">
   - In JSP -< cq:include path="mycomponent" resourceType="foundation/components/mycomponent" />
-45. ss  asd
+45. Difference between jcr:primaryType and jcr:mixinTypes
+  - There are two categories of node types, primary and mixin. Every node has a primary node type assigned to it upon creation. In addition, a mixin node type may be added to a node later in its lifecycle.
+  - The primary node type of a node usually defines node structure (i.e., allowed and required child nodes and properties) related to the problem domain being modeled. For example, a node used in storing content about business contacts might have the primary type myapp:Contact which defines properties such as myapp:givenName, myapp:familyName and so forth.
+  - Mixin node types usually specify additional properties or child nodes related to a capability being added to the node. These capabilities may include generic repository-level functions as in the case of the built-in mixins mix:versionable and mix:lockable, for example, or domain-level capabilities such as a (hypothetical) myapp:Emailable mixin type that adds the property myapp:emailAddress to a node.
 46.     
     
     
