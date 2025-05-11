@@ -279,3 +279,14 @@
 51. Suppose you have created the page using "mytemplate" template. After the creation of page, what will happen to the page if someone deleted the "mytemplate" template?
   - There will be no effect on the page because when page will be requested it will check the sling:resourcetype property of the page not the template. Check sling resolution concept
   - When you create a page out of a template, properties of template are copied to page and then any change made further to the template wont be reflected in pages created earlier. If you even delete the template, the page would continue to work
+52. What is componentGroup, cq:isContainer and cq:noDecoration property ?
+  - componentGroup - Group under which the component can be selected in the Sidekick.
+  - cq:isContainer - Checks if this component is a container component. For example a paragraph system component.
+  - cq:noDecoration - If true, the component is not rendered with automatically generated div and css classes.
+53. If I don't want to show my component in sidekick. Which property I should add in component?
+  - Add componentGroup property in component. In componentGroup property add .hidden as a value.
+54. What will happen if I add another component path into sling:resourceType property of a component?
+  - Suppose We have component A and component B
+  - In component A, added sling:resourceType property and as value component B path
+  - when you include the component A into the page, AEM will render component A
+  - But when you drag and drop component A into parsys of the page, AEM will render component B
