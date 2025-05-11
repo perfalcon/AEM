@@ -230,4 +230,21 @@
     - iparsys - The inherited paragraph system is a paragraph system that also allows you to inherit the created paragraphs from the parent. it is similar to parsys except that it allows to inherits parent page “paragraph system” at template level. You can also cancel paragraph inheritance at a level at any time. It has two checkbox options to cancel/disable the inheritance.
         - Cancel Inheritance - If selected, the components in this paragraph system are not passed down to the child pages.
         - Disable Inheritance - If selected, components of this paragraph system on this page are not inherited from the parent page.
-36. ll
+36. Explain overlaying concept in AEM.?
+    - Overlaying - The intention of overlaying a default component is to alter the appearance or behavior of a component globally, for all relative references to the component. It relies on the nature of sling to resolve to the /apps folder before searching in the /libs folder. Thus the path to the component is identical to the path to the default component, except it is in the /apps folder and not the /libs folder. More on overlaying watch this video
+    - Creating a custom component manually by creating all necessary nodes and setting value of “sling:superResourceType” property as “/libs/foundation/components/image”. By doing this you inherit all the feature of image component, even after upgrade you still inherit the features of image component. For more information watch this video
+    - After AEM 6.x, overlay can be done using 'Sling Resource Merger', but with this it is only available to TouchUI(Granite ), if it needs to be done for classic ui, then we need to copy all the nodes from /lib to /apps.
+37.Why we need to include global.jsp if we are creating a component in jsp?
+    - The JSP script file global.jsp is used to provide quick access to specific objects (i.e. to access content) to any JSP script file used to render a component. Therefore global.jsp should be included in every component rendering JSP script where one or more of the objects provided in global.jsp are used.
+    - For more information Check this [link](https://aemgeeks.wordpress.com/2017/07/31/global-jsp/#:~:text=The%20Global.,the%20objects%20provided%20in%20global.)
+38.What is the use of EditConfig node in creating a component?
+   - The edit behaviour of a component is configured by adding a cq:editConfig node of type cq:EditConfig below the component node (of type cq:Component) and by adding specific properties and child nodes.
+   - cq:editConfig (cq:EditConfig) - Defines the edit properties of the component and enables the component to appear in the Components browser or Sidekick. Note: if the component has a dialog, it will automatically appear in the Components browser or Sidekick, even if the cq:editConfig does not exist.
+   - For more information check this [link](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/components/components-basics)
+39. What is Parbase
+   - Parbase is a key component as it allows components to inherit attributes from other components, similar to subclasses in object oriented languages such as Java, C++, and so on. For example, when you open the /libs/foundation/components/text node in the CRXDE Lite, you see that it has a property named sling:resourceSuperType, which references the parbase component. The parbase here defines tree scripts to render images, titles, and so on, so that all components subclassed from this parbase can use this script.
+   - Users do not need access to the parbase.     
+40. Difference between sling:resourceSuperType and sling:resourceType.
+  - sling:resourceSuperType: It is used to achieve inheritance in cq. When set, it inherits the specified component to this component.
+  - sling:resourceType: It is a path, which locates the script to be used for rendering the content. Path used can be absolute or relative.
+41. 
