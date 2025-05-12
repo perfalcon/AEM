@@ -407,3 +407,18 @@
    - sling:resourceSuperType: It is used to achieve inheritance in cq. When set, it inherits the specified component to this component.
    - sling:resourceType: It is a path, which locates the script to be used for rendering the content. Path used can be absolute or relative.
     
+75. What is the use of CQ:defineObjects in AEM?
+   - cq:defineObjects is used to initialize implicit objects of cq.
+   - Usually we add cq:defineObjects in global.jsp so that the implicit objects are available in all components that are including global.jsp.
+76. What is Replication in CQ5?
+   - Publish (activate) content from author to publish environment.
+   - Explicitly flush content from the dispatcher cache.
+   - REPLICATION PROCESS:
+       - First, the author requests that certain content to be published (activated).
+       - The request is passed to the appropriate default replication agent.
+       - Replication agent packages the content and places it in the replication queue.
+       - The content is lifted from the queue and transported to the publish environment using the configured protocol.
+       - a servlet in the publish environment receives the request and publishes the received content, the default servlet is http://localhost:4502/bin/receive.
+77. What is Reverse Replication?
+   - Reverse replication is used to get user content generated on a publish instance back to the author instance.
+   - To do this you need a reverse replication agent in the author environment.
