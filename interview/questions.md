@@ -234,6 +234,16 @@
     - Overlaying - The intention of overlaying a default component is to alter the appearance or behavior of a component globally, for all relative references to the component. It relies on the nature of sling to resolve to the /apps folder before searching in the /libs folder. Thus the path to the component is identical to the path to the default component, except it is in the /apps folder and not the /libs folder. More on overlaying watch this video
     - Creating a custom component manually by creating all necessary nodes and setting value of “sling:superResourceType” property as “/libs/foundation/components/image”. By doing this you inherit all the feature of image component, even after upgrade you still inherit the features of image component. For more information watch this video
     - After AEM 6.x, overlay can be done using 'Sling Resource Merger', but with this it is only available to TouchUI(Granite ), if it needs to be done for classic ui, then we need to copy all the nodes from /lib to /apps.
+36. Diff between Overlay vs Resource Merger
+   - Overlay	                            |    Sling Resource Merger
+   - Based on search paths (/libs + /apps)	|    Based on Resource Type Hierarchy
+   - Need to copy the whole subtree	        |    Extends within an almost empty subtree
+   - All the properties are duplicated	    |    Only required properties are overlaid
+   - When upgrades are done to the /libs    |   	As properties are not copied, only the structure, upgrades are automatically reflected in /apps.
+      - folder, these changes have to be
+      - manually recreated under /apps.
+
+
 37.Why we need to include global.jsp if we are creating a component in jsp?
     - The JSP script file global.jsp is used to provide quick access to specific objects (i.e. to access content) to any JSP script file used to render a component. Therefore global.jsp should be included in every component rendering JSP script where one or more of the objects provided in global.jsp are used.
     - For more information Check this [link](https://aemgeeks.wordpress.com/2017/07/31/global-jsp/#:~:text=The%20Global.,the%20objects%20provided%20in%20global.)
