@@ -275,6 +275,8 @@
   - init.jsp should be included in our jsp or script file to display sidekick.
   - Note:- We should include init.jsp into base page. So that it will appear in all pages which are overriding it.
   - For more on sidekick watch this [video](https://www.youtube.com/watch?v=U9ZPGNkfCjc)
+47. What is xtype?
+    - xtype is your widget, which you place in your dialog to capture author data. xtypes such as textfield, numberfield, selection etc.
 47. Explain widget and Xtype in AEM?
   - widget - Adobe Experience Manager (AEM) uses the ExtJS widgets library, which provides the highly polished user interface elements that work across all the most important browsers and allow the creation of desktop-grade UI experiences. These widgets are included within AEM and, in addition to being used by AEM itself, can be used by any website built using AEM. For more on widgets check this link
   - xtype - In the ExtJS language, an xtype is a symbolic name given to a class. For more on xtype check this link  
