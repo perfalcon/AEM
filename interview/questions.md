@@ -376,4 +376,34 @@
         # List of files that are auto-invalidated
         }
         }
-        ```
+
+       ```
+
+
+72. How we can implement internationalization in CQ ?
+  - we can implement internationalization by using l18n bundle approach. This is used to provide multilingual site functionality to website.
+  - Below two steps should be kept in mind while implementing internationalization in cq:-
+  - Under apps–> <myapp> –>i18n –> <language Folder> should have jcr:language and jcr:mixinTypes as shown in below figure.
+    ![](https://i0.wp.com/www.aemcq5tutorials.com/wp-content/uploads/2015/09/localization-in-adobe-cq-aemcq5tutorials.png?w=961&ssl=1)
+  -  Folder inside languagefolder should have a sling:key and sling:message property as shown below:
+    ![](https://i0.wp.com/www.aemcq5tutorials.com/wp-content/uploads/2015/09/1localization-in-adobe-cq-aemcq5tutorials.png?w=837&ssl=1)
+  - For detailed explanation on how to implement internationalization click [here](https://www.aemcq5tutorials.com/tutorials/implement-internationalization-in-adobe-cq/).
+73. List Implicit objects of CQ?
+   - slingRequest – The wrapped Request Object (SlingHttpServletRequest).
+   - slingResponse – The wrapped Response Object (SlingHttpServletResponse).
+   - resource – The Sling Resource Object (slingRequest.getResource();).
+   - resourceResolver – The Sling Resource Resolver Object (slingRequest.getResoucreResolver();).
+   - currentNode – The resolved JCR node for the request.
+   - log – The Default logger ().
+   - sling – The Sling script helper.
+   - properties – The properties of the addressed resource (resource.adaptTo(ValueMap.class);).
+   - pageProperties – The properties of the page of the addressed resource.
+   - pageManager – The page manager for accessing CQ content pages (resourceResolver.adaptTo(PageManager.class);).
+   - component – The component object of the current CQ5 component..
+   - designer – The designer object for retrieving design information (resourceResolver.adaptTo(Designer.class);).
+   - currentDesign – The design of the addressed resource.
+   - currentStyle – The style of the addressed resource.
+74. Diff between sling:resourceSuperType and sling:resourceType
+   - sling:resourceSuperType: It is used to achieve inheritance in cq. When set, it inherits the specified component to this component.
+   - sling:resourceType: It is a path, which locates the script to be used for rendering the content. Path used can be absolute or relative.
+    
