@@ -1,0 +1,35 @@
+Responsibilities:
+• Provide senior level system analysis, design, development, and implementation of applications and
+databases. Integrate third party products.
+• Translate technical specifications into code for complex new or enhancement projects for internal
+clients. Write programs, develop code, test artifacts, and produce reports. Employ software
+development techniques to ensure tests are implemented in a way that support automation.
+• Elevate code into the development, test, and production environments on schedule. Provide follow up
+production support. Submit change control requests and documents.
+• Thoroughly understand software development methodology. Thoroughly understand development
+architecture standards. Train and mentor staff with less experience. Resolve elevated issues.
+• Participate in design, code, and test inspections throughout the life cycle to identify issues. Explain
+technical considerations at related meetings, including those with internal clients. Perform systems
+analysis activities.
+• Thoroughly understand client business functions and technology needs. Has a broad understanding
+of Vanguard's technologies, tools, and applications, including those that interface with business area
+and systems.
+• Interface with cross functional team members, and communicate systems issues at the appropriate
+technical level for each audience.
+• Thoroughly understand and comply with Information Technology and Information Security policies
+and procedures, and verify that deliverables meet requirements.
+• Participate in special projects and performs other duties as assigned.
+Qualifications:
+• Minimum of five years related work experience, with at least one year of development experience.
+• Undergraduate degree or equivalent combination of training and experience.
+• Adobe Experience Manager (AEM) headful development - the team works primarily in the headful
+AEM space
+• Web Development & Architecture – knowledge with HTML, CSS, JavaScript is needed along with
+general web architecture understanding
+• Site Reliability Engineering skills - the team is the primary team ensuring high availability and
+reliability for the site
+• Communication skills - you will often be asked to coordinate projects across many teams
+• Learning mindset - the team has a broad set or responsibilities requiring constant upskilling across
+the stack.
+• "Nice to haves": Amazon Web Services (AWS), Akamai CDN, Adobe Experience Cloud, iOS & Android
+Development
