@@ -422,3 +422,10 @@
 77. What is Reverse Replication?
    - Reverse replication is used to get user content generated on a publish instance back to the author instance.
    - To do this you need a reverse replication agent in the author environment.
+78. Overlay vs Override
+   - **Overlays** copy a component from /libs to /apps at the same path, allowing you to modify the copied component without affecting the original in /libs
+       - Use overlays when you need to change the entire behavior of a component, or when you want to isolate your customizations from the original AEM components. 
+   - **Overrides**, on the other hand, use the sling:resourceSuperType property to extend an existing component, inheriting its behavior and then adding or modifying specific properties.
+       - Use overrides when you need to extend an existing component's behavior and take advantage of its inheritance. 
+   - 
+    
