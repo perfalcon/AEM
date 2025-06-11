@@ -360,25 +360,24 @@
   - The Dispatcher uses the web server's ability to serve static content. The Dispatcher stores cached documents in the web server’s document root. The Dispatcher has two primary methods for updating the cache content when changes are made to the website.
   - Content Updates remove the pages that have changed, as well as files that are directly associated with them.
   - Auto-Invalidation automatically invalidates those parts of the cache that may be out of date after an update. For example, it effectively flags relevant pages as being out of date, without deleting anything.
-        ```
-        Example of cache section:
-        /cache
-        {
-        /docroot "/opt/dispatcher/cache"
-        /statfile "/tmp/dispatcher-website.stat"
-        /allowAuthorized "0"
-        /rules
-        {
-        # List of files that are cached
-        }
-        /invalidate
-        {
-        # List of files that are auto-invalidated
-        }
-        }
-
+    
        ```
-
+           Example of cache section:
+           /cache
+           {
+           /docroot "/opt/dispatcher/cache"
+           /statfile "/tmp/dispatcher-website.stat"
+           /allowAuthorized "0"
+           /rules
+           {
+           # List of files that are cached
+           }
+           /invalidate
+           {
+           # List of files that are auto-invalidated
+           }
+           }
+       ```
 
 72. How we can implement internationalization in CQ ?
   - we can implement internationalization by using l18n bundle approach. This is used to provide multilingual site functionality to website.
