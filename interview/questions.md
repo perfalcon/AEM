@@ -387,6 +387,7 @@
   -  Folder inside languagefolder should have a sling:key and sling:message property as shown below:
     ![](https://i0.wp.com/www.aemcq5tutorials.com/wp-content/uploads/2015/09/1localization-in-adobe-cq-aemcq5tutorials.png?w=837&ssl=1)
   - For detailed explanation on how to implement internationalization click [here](https://www.aemcq5tutorials.com/tutorials/implement-internationalization-in-adobe-cq/).
+  - You can also see the list of all available dictionary available in aem here:- http://localhost:4502/libs/cq/i18n/translator.html
 73. List Implicit objects of CQ?
    - slingRequest – The wrapped Request Object (SlingHttpServletRequest).
    - slingResponse – The wrapped Response Object (SlingHttpServletResponse).
